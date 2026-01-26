@@ -1,0 +1,93 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+
+#include <mysql.h>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+
+// Create btn
+void __fastcall TForm1::CreateBTNClick(TObject *Sender)
+{
+	MYSQL_STMT* stmt;
+	MYSQL_BIND bind[2];
+
+	int id = 1;
+	char name[50] = "cha";
+	unsigned long name_length;
+
+
+	id = IDValue->Text.ToInt();
+
+	AnsiString tmp = NameValue->Text;
+	strncpy(name, tmp.c_str(), sizeof(name));
+	name[sizeof(name) - 1] = '\0';
+
+	name_length = strlen(name);
+
+
+	const char* sql = "INSERT INTO 테이블명 (id, name) VALUES (?, ?)";
+
+	stmt = mysql_stmt_init(conn);
+	mysql_stmt_prepare(stmt, sql, strlen(sql));
+
+	memset(bind, 0, sizeof(bind));
+
+
+	// id 바인딩
+	bind[0].buffer_type = MYSQL_TYPE_LONG;
+	bind[0].buffer = (char*)&id;
+
+	// name 바인딩
+	name_length = strlen(name);
+	bind[1].buffer_type = MYSQL_TYPE_STRING;
+	bind[1].buffer = (char*)name;
+	bind[1].buffer_length = name_length;
+	bind[1].length = &name_length;
+
+	mysql_stmt_bind_param(stmt, bind);
+
+
+	if(mysql_stmt_execute(stmt) != 0)
+		ShowMessage(mysql_stmt_error(stmt));
+
+	mysql_stmt_close(stmt);
+
+	MemoValue->Lines->Add
+	(
+	Format("%d의 아이디를 가진 유저: %s가 추가되었습니다.",
+		   ARRAYOFCONST((id, name)))
+	);
+}
+
+// Read btn// Update btn// Delete btn
+void __fastcall TForm1::FormCreate(TObject *Sender)
+{
+	conn = mysql_init(NULL);
+
+	if(!mysql_real_connect(
+		conn,
+		"localhost",
+		"root",
+		"password",
+		"testdb",
+		3306,
+		NULL,
+		0
+		))
+	{
+		ShowMessage("MySQL connection failed");
+    }
+}
+//---------------------------------------------------------------------------
