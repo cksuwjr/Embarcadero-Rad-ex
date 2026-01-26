@@ -32,7 +32,7 @@ void TForm1::InitializeMemo(ProcessType newType){
 	NameValue->Visible = true;
 	Label2->Visible = true;
 
-	if(newType == ProcessType::Read || newType == ProcessType::Delete)
+	if(newType == ProcessType::Read)
 	{
 		NameValue->Visible = false;
 		Label2->Visible = false;
@@ -112,8 +112,6 @@ void __fastcall TForm1::CreateBTNClick(TObject *Sender)
 		   ARRAYOFCONST((IDValue->Text, NameValue->Text)))
 	);
 
-	ShowMessage("추가되었습니다.");
-
 	IDValue->Text = "";
 	NameValue->Text = "";
 }
@@ -154,48 +152,7 @@ void __fastcall TForm1::ReadBTNClick(TObject *Sender)
 			   ARRAYOFCONST((IDValue->Text))
 			   )
 	);
-
-	IDValue->Text = "";
-	NameValue->Text = "";
 }
 //---------------------------------------------------------------------------
 
-
-void __fastcall TForm1::UpdateBTNClick(TObject *Sender)
-{
-	InitializeMemo(ProcessType::Update);
-
-
-	if(IDValue->Text == "") return;
-	if(NameValue->Text == "") return;
-
-
-	MemoValue->Lines->Add(
-		Format("%s의 아이디를 가진 유저를%s로 수정합니다",
-			   ARRAYOFCONST((IDValue->Text, NameValue->Text))
-			   )
-	);
-
-	IDValue->Text = "";
-	NameValue->Text = "";
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TForm1::DeleteBTNClick(TObject *Sender)
-{
-	InitializeMemo(ProcessType::Delete);
-
-
-	if(IDValue->Text == "") return;
-
-	MemoValue->Lines->Add(
-		Format("%s의 아이디를 가진 유저를 삭제합니다",
-			   ARRAYOFCONST((IDValue->Text))
-			   )
-	);
-
-	IDValue->Text = "";
-	NameValue->Text = "";
-}
-//---------------------------------------------------------------------------
 

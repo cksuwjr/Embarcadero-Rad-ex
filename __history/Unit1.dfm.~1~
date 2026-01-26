@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Caption = 'ID NAME '#44288#47532' '#49884#49828#53596'('#50672#49845#50857')'
+  Caption = #54268' '#50672#49845#50857
   ClientHeight = 299
   ClientWidth = 635
   Color = clBtnFace
@@ -33,7 +33,6 @@ object Form1: TForm1
     Top = 87
     Width = 473
     Height = 156
-    Enabled = False
     Lines.Strings = (
       'MemoValue')
     TabOrder = 0
@@ -54,7 +53,6 @@ object Form1: TForm1
     Height = 48
     Caption = 'READ'
     TabOrder = 2
-    OnClick = ReadBTNClick
   end
   object UpdateBTN: TButton
     Left = 519
@@ -63,7 +61,6 @@ object Form1: TForm1
     Height = 48
     Caption = 'UPDATE'
     TabOrder = 3
-    OnClick = UpdateBTNClick
   end
   object DeleteBTN: TButton
     Left = 519
@@ -72,7 +69,6 @@ object Form1: TForm1
     Height = 48
     Caption = 'DELETE'
     TabOrder = 4
-    OnClick = DeleteBTNClick
   end
   object IDValue: TEdit
     Left = 59

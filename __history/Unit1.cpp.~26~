@@ -112,8 +112,6 @@ void __fastcall TForm1::CreateBTNClick(TObject *Sender)
 		   ARRAYOFCONST((IDValue->Text, NameValue->Text)))
 	);
 
-	ShowMessage("추가되었습니다.");
-
 	IDValue->Text = "";
 	NameValue->Text = "";
 }

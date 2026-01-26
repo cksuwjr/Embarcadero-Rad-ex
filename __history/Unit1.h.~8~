@@ -8,14 +8,6 @@
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
 //---------------------------------------------------------------------------
-enum class ProcessType{
-	None,
-	Create,
-	Read,
-	Update,
-	Delete,
-};
-
 class TForm1 : public TForm
 {
 __published:	// IDE-managed Components
@@ -31,12 +23,9 @@ __published:	// IDE-managed Components
 	void __fastcall CreateBTNClick(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall ReadBTNClick(TObject *Sender);
-	void __fastcall UpdateBTNClick(TObject *Sender);
-	void __fastcall DeleteBTNClick(TObject *Sender);
 private:	// User declarations
 	//MYSQL* conn;
-	ProcessType ptype;
-	void InitializeMemo(ProcessType newType);
+	Unit1.ProcessType *ptype;
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
 };
