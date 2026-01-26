@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions/>
-  <Default.Personality>
-    <Projects ActiveProject="C:\Users\user\Documents\RAD Studio\Projects\Project2.cbproj"/>
-  </Default.Personality>
+	<Transactions/>
+	<Default.Personality>
+		<Projects ActiveProject="C:\Users\user\Documents\RAD Studio\Projects\Exercise\Project2.cbproj"/>
+	</Default.Personality>
 </BorlandProject>

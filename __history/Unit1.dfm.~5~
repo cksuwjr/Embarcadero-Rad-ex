@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Caption = 'ID NAME '#44288#47532' '#49884#49828#53596'('#50672#49845#50857')'
+  Caption = #54268' '#50672#49845#50857
   ClientHeight = 299
   ClientWidth = 635
   Color = clBtnFace

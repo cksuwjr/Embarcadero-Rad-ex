@@ -112,8 +112,6 @@ void __fastcall TForm1::CreateBTNClick(TObject *Sender)
 		   ARRAYOFCONST((IDValue->Text, NameValue->Text)))
 	);
 
-	ShowMessage("추가되었습니다.");
-
 	IDValue->Text = "";
 	NameValue->Text = "";
 }
@@ -167,8 +165,6 @@ void __fastcall TForm1::UpdateBTNClick(TObject *Sender)
 
 
 	if(IDValue->Text == "") return;
-	if(NameValue->Text == "") return;
-
 
 	MemoValue->Lines->Add(
 		Format("%s의 아이디를 가진 유저를%s로 수정합니다",
