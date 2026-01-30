@@ -1,0 +1,36 @@
+//---------------------------------------------------------------------------
+
+#ifndef ButtonSystemH
+#define ButtonSystemH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include "cyBaseLed.hpp"
+#include "cyLed.hpp"
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TLabel *Label1;
+	TLabel *Label2;
+	TcyLed *InputLed1;
+	TcyLed *InputLed2;
+	TcyLed *OutputLed1;
+	TcyLed *OutPutLed2;
+	void __fastcall FormCreate(TObject *Sender);
+private:	// User declarations
+	void Io_Init();
+	void Io_Close();
+	void Input_Check();
+	void Output_Init();
+	void Output_IO();
+	bool Output_Process(int Output_Number, bool OnOff);
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif

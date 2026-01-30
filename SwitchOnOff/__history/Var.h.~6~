@@ -1,0 +1,5 @@
+#define MAX_INPUT_COUNT		16
+#define MAX_OUTPUT_COUNT	16
+
+bool	Input_Data[MAX_INPUT_COUNT];
+bool	Output_Data[MAX_OUTPUT_COUNT];
