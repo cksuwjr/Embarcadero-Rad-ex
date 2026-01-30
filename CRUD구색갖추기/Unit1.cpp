@@ -6,6 +6,8 @@
 #include "Unit1.h"
 
 //#include <mysql.h>
+#include <System.Classes.hpp>
+
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -23,10 +25,20 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 
 
 void TForm1::InitializeMemo(ProcessType newType){
-	IDValue->Text = "";
-	NameValue->Text = "";
-
 	if(ptype == newType) return;
+
+
+	IDValue->Visible = true;
+	NameValue->Visible = true;
+	Label2->Visible = true;
+
+	if(newType == ProcessType::Read || newType == ProcessType::Delete)
+	{
+		NameValue->Visible = false;
+		Label2->Visible = false;
+	}
+
+
 
 	ptype = newType;
 	MemoValue->Lines->Clear();
@@ -91,17 +103,25 @@ void __fastcall TForm1::CreateBTNClick(TObject *Sender)
 
 	InitializeMemo(ProcessType::Create);
 
+	if(IDValue->Text == "") return;
+	if(NameValue->Text == "") return;
+
 	MemoValue->Lines->Add
 	(
-	Format("%d의 아이디를 가진 유저: %s가 추가되었습니다.",
-		   ARRAYOFCONST((1, "cha")))
+	Format("%s의 아이디를 가진 유저: %s가 추가되었습니다.",
+		   ARRAYOFCONST((IDValue->Text, NameValue->Text)))
 	);
+
+	ShowMessage("추가되었습니다.");
+
+	IDValue->Text = "";
+	NameValue->Text = "";
 }
 
-// Read btn// Update btn// Delete btn
 void __fastcall TForm1::FormCreate(TObject *Sender)
 {
 	ptype = ProcessType::None;
+	MemoValue->Lines->Clear();
 /*
 	conn = mysql_init(NULL);
 
@@ -125,11 +145,56 @@ void __fastcall TForm1::ReadBTNClick(TObject *Sender)
 {
 	InitializeMemo(ProcessType::Read);
 
+
+	if(IDValue->Text == "") return;
+
 	MemoValue->Lines->Add(
 		Format("%s의 아이디를 가진 유저를 불러옵니다",
 			   ARRAYOFCONST((IDValue->Text))
 			   )
 	);
+
+	IDValue->Text = "";
+	NameValue->Text = "";
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::UpdateBTNClick(TObject *Sender)
+{
+	InitializeMemo(ProcessType::Update);
+
+
+	if(IDValue->Text == "") return;
+	if(NameValue->Text == "") return;
+
+
+	MemoValue->Lines->Add(
+		Format("%s의 아이디를 가진 유저를%s로 수정합니다",
+			   ARRAYOFCONST((IDValue->Text, NameValue->Text))
+			   )
+	);
+
+	IDValue->Text = "";
+	NameValue->Text = "";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::DeleteBTNClick(TObject *Sender)
+{
+	InitializeMemo(ProcessType::Delete);
+
+
+	if(IDValue->Text == "") return;
+
+	MemoValue->Lines->Add(
+		Format("%s의 아이디를 가진 유저를 삭제합니다",
+			   ARRAYOFCONST((IDValue->Text))
+			   )
+	);
+
+	IDValue->Text = "";
+	NameValue->Text = "";
 }
 //---------------------------------------------------------------------------
 
