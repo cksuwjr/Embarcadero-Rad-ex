@@ -22,6 +22,7 @@
 #pragma link "sSkinProvider"
 #pragma link "sCheckBox"
 #pragma link "sPanel"
+#pragma link "sGroupBox"
 #pragma resource "*.dfm"
 TPrintForm *PrintForm;
 //---------------------------------------------------------------------------
@@ -187,6 +188,8 @@ __fastcall TPrintForm::SetCheckBoxOptionVisible(AnsiString CheckBoxString, bool 
 	TsDecimalSpinEdit* Size = (TsDecimalSpinEdit *)FindComponent(CheckBoxString + "_Size");
 
 
+	OutputDebugStringA("µþ±ð");
+
 	if(SetVisible)
 	{
 		X->Visible = true;
@@ -253,6 +256,7 @@ void __fastcall TPrintForm::FormCreate(TObject *Sender)
 	YEdit->Text = "50";
 
 	PrintForm->UIText->Text = "·Î±×";
+	PrintForm->BarcodeRead->Text = "";
 
 	Company_Checkbox->Checked = true;
 	Part_Number_Checkbox->Checked = true;
@@ -304,37 +308,39 @@ void __fastcall TPrintForm::SaveBtnClick(TObject *Sender)
 
 void __fastcall TPrintForm::Company_CheckboxClick(TObject *Sender)
 {
-	SetCheckBoxOptionVisible("Company", ((TCheckBox *)Sender)->Checked);
+	SetCheckBoxOptionVisible("Company", ((TsCheckBox *)Sender)->Checked);
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TPrintForm::Part_Number_CheckboxClick(TObject *Sender)
 {
-	SetCheckBoxOptionVisible("Part_Number", ((TCheckBox *)Sender)->Checked);
+	SetCheckBoxOptionVisible("Part_Number", ((TsCheckBox *)Sender)->Checked);
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TPrintForm::Alc_CheckboxClick(TObject *Sender)
 {
-	SetCheckBoxOptionVisible("Alc", ((TCheckBox *)Sender)->Checked);
+	SetCheckBoxOptionVisible("Alc", ((TsCheckBox *)Sender)->Checked);
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TPrintForm::Product_4M_CheckboxClick(TObject *Sender)
 {
-	SetCheckBoxOptionVisible("Product_4M", ((TCheckBox *)Sender)->Checked);
+	SetCheckBoxOptionVisible("Product_4M", ((TsCheckBox *)Sender)->Checked);
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TPrintForm::Serial_CheckboxClick(TObject *Sender)
 {
-	SetCheckBoxOptionVisible("Serial", ((TCheckBox *)Sender)->Checked);
+	SetCheckBoxOptionVisible("Serial", ((TsCheckBox *)Sender)->Checked);
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TPrintForm::Date_CheckboxClick(TObject *Sender)
 {
-    SetCheckBoxOptionVisible("Date", ((TCheckBox *)Sender)->Checked);
+	SetCheckBoxOptionVisible("Date", ((TsCheckBox *)Sender)->Checked);
 }
 //---------------------------------------------------------------------------
+
+
 

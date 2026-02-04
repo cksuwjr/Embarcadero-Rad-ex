@@ -4,9 +4,6 @@
 #pragma hdrstop
 #include <tchar.h>
 //---------------------------------------------------------------------------
-
-
-
 USEFORM("PrintSystem.cpp", PrintForm);
 USEFORM("ButtonSystem.cpp", IOForm);
 //---------------------------------------------------------------------------

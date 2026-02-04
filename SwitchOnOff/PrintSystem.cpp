@@ -12,6 +12,8 @@
 // ¹öÆ°
 #include "Dask.h"
 
+// sql
+#include "SQL.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -344,4 +346,10 @@ void __fastcall TPrintForm::Date_CheckboxClick(TObject *Sender)
 
 
 
+
+void __fastcall TPrintForm::SQLSendBtnClick(TObject *Sender)
+{
+	SQL_Data_Save();
+}
+//---------------------------------------------------------------------------
 

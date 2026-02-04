@@ -2,8 +2,8 @@ object PrintForm: TPrintForm
   Left = 0
   Top = 0
   Caption = #54532#47536#53944' '#53580#49828#53944' '#54532#47196#44536#47016
-  ClientHeight = 844
-  ClientWidth = 738
+  ClientHeight = 751
+  ClientWidth = 883
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,72 +22,13 @@ object PrintForm: TPrintForm
     Height = 0
     Shape = bsTopLine
   end
-  object PrintButton: TButton
-    Left = 592
-    Top = 590
-    Width = 133
-    Height = 26
-    Caption = #54532#47536#53944#54616#44592
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 0
-    OnClick = PrintButtonClick
-  end
-  object SaveBtn: TButton
-    Left = 447
-    Top = 590
-    Width = 133
-    Height = 26
-    Caption = #51200#51109
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    OnClick = SaveBtnClick
-  end
-  object LoadBtn: TButton
-    Left = 308
-    Top = 590
-    Width = 133
-    Height = 26
-    Caption = #48520#47084#50724#44592
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-  end
-  object UIText: TMemo
-    Left = 24
-    Top = 622
-    Width = 577
-    Height = 89
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'UIText'
-    Font.Style = []
-    Lines.Strings = (
-      'Memo1')
-    ParentFont = False
-    TabOrder = 3
-  end
   object sPanel1: TsPanel
     Left = 1248
     Top = 680
     Width = 506
     Height = 53
     Caption = ' '
-    TabOrder = 4
+    TabOrder = 0
     SkinData.SkinSection = 'PANEL'
     object sPanel2: TsPanel
       AlignWithMargins = True
@@ -99,8 +40,6 @@ object PrintForm: TPrintForm
       Caption = 'sPanel2'
       TabOrder = 0
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = 284
-      ExplicitTop = 15
     end
     object sPanel3: TsPanel
       AlignWithMargins = True
@@ -119,7 +58,6 @@ object PrintForm: TPrintForm
       TabOrder = 1
       SkinData.CustomFont = True
       SkinData.SkinSection = 'PANEL'
-      ExplicitTop = 40
     end
     object sPanel4: TsPanel
       AlignWithMargins = True
@@ -137,8 +75,6 @@ object PrintForm: TPrintForm
       ParentFont = False
       TabOrder = 2
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = 108
-      ExplicitTop = 20
       object sCheckBox2: TsCheckBox
         AlignWithMargins = True
         Left = 4
@@ -154,124 +90,26 @@ object PrintForm: TPrintForm
         SkinData.SkinSection = 'CHECKBOX'
         ImgChecked = 0
         ImgUnchecked = 0
-        ExplicitLeft = 20
-        ExplicitTop = 6
-      end
-    end
-  end
-  object sGroupBox1: TsGroupBox
-    Left = 0
-    Top = 739
-    Width = 738
-    Height = 105
-    Align = alBottom
-    Caption = 'sGroupBox1'
-    TabOrder = 5
-    SkinData.SkinSection = 'GROUPBOX'
-    ExplicitTop = 536
-    ExplicitWidth = 1128
-    object sPanel5: TsPanel
-      Left = 2
-      Top = 15
-      Width = 734
-      Height = 88
-      Align = alClient
-      Caption = ' '
-      TabOrder = 0
-      SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = 607
-      ExplicitTop = 52
-      ExplicitWidth = 506
-      ExplicitHeight = 53
-      object sPanel6: TsPanel
-        AlignWithMargins = True
-        Left = 554
-        Top = 4
-        Width = 176
-        Height = 80
-        Align = alRight
-        Caption = 'sPanel2'
-        TabOrder = 0
-        SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 944
-      end
-      object sPanel7: TsPanel
-        AlignWithMargins = True
-        Left = 471
-        Top = 4
-        Width = 77
-        Height = 80
-        Align = alClient
-        Caption = 'sPanel2'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -16
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 1
-        SkinData.CustomFont = True
-        SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 116
-        ExplicitWidth = 274
-        ExplicitHeight = 45
-      end
-      object sPanel8: TsPanel
-        AlignWithMargins = True
-        Left = 4
-        Top = 4
-        Width = 461
-        Height = 80
-        Align = alLeft
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -16
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 2
-        SkinData.SkinSection = 'PANEL'
-        object sCheckBox3: TsCheckBox
-          AlignWithMargins = True
-          Left = 4
-          Top = 4
-          Width = 453
-          Height = 72
-          Caption = #50629#52404' '#53076#46300
-          Align = alClient
-          AutoSize = False
-          Checked = True
-          State = cbChecked
-          TabOrder = 0
-          SkinData.SkinSection = 'CHECKBOX'
-          ImgChecked = 0
-          ImgUnchecked = 0
-          ExplicitLeft = 250
-          ExplicitTop = -14
-        end
       end
     end
   end
   object MainPanel: TsPanel
-    Left = 8
-    Top = 7
-    Width = 723
-    Height = 577
+    Left = 0
+    Top = 0
+    Width = 883
+    Height = 751
+    Align = alClient
     Caption = 'MainPanel'
-    TabOrder = 6
+    TabOrder = 1
     SkinData.SkinSection = 'PANEL'
     object sPanel10: TsPanel
       Left = 1
       Top = 521
-      Width = 721
+      Width = 881
       Height = 52
       Align = alTop
       TabOrder = 0
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = -212
-      ExplicitTop = 108
-      ExplicitWidth = 714
       object sPanel11: TsPanel
         AlignWithMargins = True
         Left = 4
@@ -297,6 +135,7 @@ object PrintForm: TPrintForm
           Font.Style = []
           ParentFont = False
           TabOrder = 0
+          OnClick = Date_CheckboxClick
           SkinData.SkinSection = 'CHECKBOX'
           ImgChecked = 0
           ImgUnchecked = 0
@@ -304,14 +143,13 @@ object PrintForm: TPrintForm
       end
       object Date_Option_Panel: TsPanel
         AlignWithMargins = True
-        Left = 511
+        Left = 671
         Top = 4
         Width = 206
         Height = 44
         Align = alRight
         TabOrder = 1
         SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 504
         object sPanel13: TsPanel
           AlignWithMargins = True
           Left = 71
@@ -322,22 +160,23 @@ object PrintForm: TPrintForm
           Caption = 'YPanel'
           TabOrder = 0
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 4
-          ExplicitHeight = 214
           object Date_Y: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '30'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -349,10 +188,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 30.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel14: TsPanel
@@ -365,21 +203,23 @@ object PrintForm: TPrintForm
           Caption = 'XPanel'
           TabOrder = 1
           SkinData.SkinSection = 'PANEL'
-          ExplicitHeight = 214
           object Date_X: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '105'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -391,10 +231,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 105.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel15: TsPanel
@@ -407,21 +246,23 @@ object PrintForm: TPrintForm
           Caption = 'SizePanel'
           TabOrder = 2
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 188
           object Date_Size: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '1'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -433,10 +274,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 1.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
       end
@@ -444,14 +284,11 @@ object PrintForm: TPrintForm
     object sPanel17: TsPanel
       Left = 1
       Top = 469
-      Width = 721
+      Width = 881
       Height = 52
       Align = alTop
       TabOrder = 1
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = -212
-      ExplicitTop = 108
-      ExplicitWidth = 714
       object sPanel18: TsPanel
         AlignWithMargins = True
         Left = 4
@@ -477,6 +314,7 @@ object PrintForm: TPrintForm
           Font.Style = []
           ParentFont = False
           TabOrder = 0
+          OnClick = Serial_CheckboxClick
           SkinData.SkinSection = 'CHECKBOX'
           ImgChecked = 0
           ImgUnchecked = 0
@@ -484,14 +322,13 @@ object PrintForm: TPrintForm
       end
       object Serial_Option_Panel: TsPanel
         AlignWithMargins = True
-        Left = 511
+        Left = 671
         Top = 4
         Width = 206
         Height = 44
         Align = alRight
         TabOrder = 1
         SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 504
         object sPanel20: TsPanel
           AlignWithMargins = True
           Left = 71
@@ -502,22 +339,23 @@ object PrintForm: TPrintForm
           Caption = 'YPanel'
           TabOrder = 0
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 4
-          ExplicitHeight = 214
           object Serial_Y: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '55'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -529,10 +367,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 55.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel21: TsPanel
@@ -545,21 +382,23 @@ object PrintForm: TPrintForm
           Caption = 'XPanel'
           TabOrder = 1
           SkinData.SkinSection = 'PANEL'
-          ExplicitHeight = 214
           object Serial_X: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '105'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -571,10 +410,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 105.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel22: TsPanel
@@ -587,21 +425,23 @@ object PrintForm: TPrintForm
           Caption = 'SizePanel'
           TabOrder = 2
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 188
           object Serial_Size: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '1'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -613,10 +453,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 1.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
       end
@@ -624,15 +463,12 @@ object PrintForm: TPrintForm
     object sPanel24: TsPanel
       Left = 1
       Top = 417
-      Width = 721
+      Width = 881
       Height = 52
       Align = alTop
       Caption = 'InnerPanel'
       TabOrder = 2
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = -212
-      ExplicitTop = 108
-      ExplicitWidth = 714
       object sPanel25Lot_Panel: TsPanel
         AlignWithMargins = True
         Left = 4
@@ -652,31 +488,29 @@ object PrintForm: TPrintForm
       end
       object sPanel26: TsPanel
         AlignWithMargins = True
-        Left = 511
+        Left = 671
         Top = 4
         Width = 206
         Height = 44
         Align = alRight
         TabOrder = 1
         SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 504
       end
       object sPanel30: TsPanel
         AlignWithMargins = True
         Left = 106
         Top = 4
-        Width = 399
+        Width = 559
         Height = 44
         Align = alClient
         Caption = 'InnerRightPanel'
         TabOrder = 2
         SkinData.SkinSection = 'PANEL'
-        ExplicitWidth = 387
         object Lot_Panel: TsEdit
           AlignWithMargins = True
           Left = 6
           Top = 6
-          Width = 387
+          Width = 547
           Height = 32
           Margins.Left = 5
           Margins.Top = 5
@@ -703,22 +537,18 @@ object PrintForm: TPrintForm
           BoundLabel.Layout = sclLeft
           BoundLabel.MaxWidth = 0
           BoundLabel.UseSkinColor = True
-          ExplicitWidth = 375
         end
       end
     end
     object sPanel31: TsPanel
       Left = 1
       Top = 365
-      Width = 721
+      Width = 881
       Height = 52
       Align = alTop
       Caption = 'InnerPanel'
       TabOrder = 3
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = -212
-      ExplicitTop = 108
-      ExplicitWidth = 714
       object sPanel32: TsPanel
         AlignWithMargins = True
         Left = 4
@@ -738,31 +568,29 @@ object PrintForm: TPrintForm
       end
       object sPanel33: TsPanel
         AlignWithMargins = True
-        Left = 511
+        Left = 671
         Top = 4
         Width = 206
         Height = 44
         Align = alRight
         TabOrder = 1
         SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 504
       end
       object sPanel37: TsPanel
         AlignWithMargins = True
         Left = 106
         Top = 4
-        Width = 399
+        Width = 559
         Height = 44
         Align = alClient
         Caption = 'InnerRightPanel'
         TabOrder = 2
         SkinData.SkinSection = 'PANEL'
-        ExplicitWidth = 387
         object EO_Panel: TsEdit
           AlignWithMargins = True
           Left = 6
           Top = 6
-          Width = 387
+          Width = 547
           Height = 32
           Margins.Left = 5
           Margins.Top = 5
@@ -789,23 +617,18 @@ object PrintForm: TPrintForm
           BoundLabel.Layout = sclLeft
           BoundLabel.MaxWidth = 0
           BoundLabel.UseSkinColor = True
-          ExplicitLeft = 10
-          ExplicitTop = 8
         end
       end
     end
     object sPanel38: TsPanel
       Left = 1
       Top = 313
-      Width = 721
+      Width = 881
       Height = 52
       Align = alTop
       Caption = 'InnerPanel'
       TabOrder = 4
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = -212
-      ExplicitTop = 108
-      ExplicitWidth = 714
       object sPanel39: TsPanel
         AlignWithMargins = True
         Left = 4
@@ -831,6 +654,7 @@ object PrintForm: TPrintForm
           Font.Style = []
           ParentFont = False
           TabOrder = 0
+          OnClick = Product_4M_CheckboxClick
           SkinData.SkinSection = 'CHECKBOX'
           ImgChecked = 0
           ImgUnchecked = 0
@@ -838,14 +662,13 @@ object PrintForm: TPrintForm
       end
       object Product_4M_Option_Panel: TsPanel
         AlignWithMargins = True
-        Left = 511
+        Left = 671
         Top = 4
         Width = 206
         Height = 44
         Align = alRight
         TabOrder = 1
         SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 504
         object sPanel41: TsPanel
           AlignWithMargins = True
           Left = 71
@@ -856,22 +679,23 @@ object PrintForm: TPrintForm
           Caption = 'YPanel'
           TabOrder = 0
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 4
-          ExplicitHeight = 214
           object Product_4M_Y: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '0'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -883,10 +707,8 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel42: TsPanel
@@ -899,21 +721,23 @@ object PrintForm: TPrintForm
           Caption = 'XPanel'
           TabOrder = 1
           SkinData.SkinSection = 'PANEL'
-          ExplicitHeight = 214
           object Product_4M_X: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '110'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -925,10 +749,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 110.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel43: TsPanel
@@ -941,21 +764,23 @@ object PrintForm: TPrintForm
           Caption = 'SizePanel'
           TabOrder = 2
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 188
           object Product_4M_Size: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '1'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -967,10 +792,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 1.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
       end
@@ -978,18 +802,17 @@ object PrintForm: TPrintForm
         AlignWithMargins = True
         Left = 106
         Top = 4
-        Width = 399
+        Width = 559
         Height = 44
         Align = alClient
         Caption = 'InnerRightPanel'
         TabOrder = 2
         SkinData.SkinSection = 'PANEL'
-        ExplicitWidth = 387
         object Product_4M_Panel: TsEdit
           AlignWithMargins = True
           Left = 6
           Top = 6
-          Width = 387
+          Width = 547
           Height = 32
           Margins.Left = 5
           Margins.Top = 5
@@ -1016,22 +839,18 @@ object PrintForm: TPrintForm
           BoundLabel.Layout = sclLeft
           BoundLabel.MaxWidth = 0
           BoundLabel.UseSkinColor = True
-          ExplicitWidth = 375
         end
       end
     end
     object sPanel45: TsPanel
       Left = 1
       Top = 261
-      Width = 721
+      Width = 881
       Height = 52
       Align = alTop
       Caption = 'InnerPanel'
       TabOrder = 5
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = -212
-      ExplicitTop = 108
-      ExplicitWidth = 714
       object sPanel46: TsPanel
         AlignWithMargins = True
         Left = 4
@@ -1057,6 +876,7 @@ object PrintForm: TPrintForm
           Font.Style = []
           ParentFont = False
           TabOrder = 0
+          OnClick = Alc_CheckboxClick
           SkinData.SkinSection = 'CHECKBOX'
           ImgChecked = 0
           ImgUnchecked = 0
@@ -1064,14 +884,13 @@ object PrintForm: TPrintForm
       end
       object Alc_Option_Panel: TsPanel
         AlignWithMargins = True
-        Left = 511
+        Left = 671
         Top = 4
         Width = 206
         Height = 44
         Align = alRight
         TabOrder = 1
         SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 504
         object sPanel48: TsPanel
           AlignWithMargins = True
           Left = 71
@@ -1082,22 +901,23 @@ object PrintForm: TPrintForm
           Caption = 'YPanel'
           TabOrder = 0
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 4
-          ExplicitHeight = 214
           object Alc_Y: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '80'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1109,10 +929,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 80.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel49: TsPanel
@@ -1125,21 +944,23 @@ object PrintForm: TPrintForm
           Caption = 'XPanel'
           TabOrder = 1
           SkinData.SkinSection = 'PANEL'
-          ExplicitHeight = 214
           object Alc_X: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '105'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1151,10 +972,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 105.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel50: TsPanel
@@ -1167,21 +987,23 @@ object PrintForm: TPrintForm
           Caption = 'SizePanel'
           TabOrder = 2
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 188
           object Alc_Size: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '1'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1193,10 +1015,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 1.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
       end
@@ -1204,18 +1025,17 @@ object PrintForm: TPrintForm
         AlignWithMargins = True
         Left = 106
         Top = 4
-        Width = 399
+        Width = 559
         Height = 44
         Align = alClient
         Caption = 'InnerRightPanel'
         TabOrder = 2
         SkinData.SkinSection = 'PANEL'
-        ExplicitWidth = 387
         object Alc_Panel: TsEdit
           AlignWithMargins = True
           Left = 6
           Top = 6
-          Width = 387
+          Width = 547
           Height = 32
           Margins.Left = 5
           Margins.Top = 5
@@ -1242,22 +1062,18 @@ object PrintForm: TPrintForm
           BoundLabel.Layout = sclLeft
           BoundLabel.MaxWidth = 0
           BoundLabel.UseSkinColor = True
-          ExplicitWidth = 375
         end
       end
     end
     object sPanel52: TsPanel
       Left = 1
       Top = 209
-      Width = 721
+      Width = 881
       Height = 52
       Align = alTop
       Caption = 'InnerPanel'
       TabOrder = 6
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = -212
-      ExplicitTop = 108
-      ExplicitWidth = 714
       object sPanel53: TsPanel
         AlignWithMargins = True
         Left = 4
@@ -1283,6 +1099,7 @@ object PrintForm: TPrintForm
           Font.Style = []
           ParentFont = False
           TabOrder = 0
+          OnClick = Part_Number_CheckboxClick
           SkinData.SkinSection = 'CHECKBOX'
           ImgChecked = 0
           ImgUnchecked = 0
@@ -1290,14 +1107,13 @@ object PrintForm: TPrintForm
       end
       object Part_Number_Option_Panel: TsPanel
         AlignWithMargins = True
-        Left = 511
+        Left = 671
         Top = 4
         Width = 206
         Height = 44
         Align = alRight
         TabOrder = 1
         SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 504
         object sPanel55: TsPanel
           AlignWithMargins = True
           Left = 71
@@ -1308,22 +1124,23 @@ object PrintForm: TPrintForm
           Caption = 'YPanel'
           TabOrder = 0
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 4
-          ExplicitHeight = 214
           object Part_Number_Y: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '0'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1335,8 +1152,8 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 2
-            ExplicitTop = -2
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel56: TsPanel
@@ -1349,21 +1166,23 @@ object PrintForm: TPrintForm
           Caption = 'XPanel'
           TabOrder = 1
           SkinData.SkinSection = 'PANEL'
-          ExplicitHeight = 214
           object Part_Number_X: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '20'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1375,10 +1194,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 20.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel57: TsPanel
@@ -1391,21 +1209,23 @@ object PrintForm: TPrintForm
           Caption = 'SizePanel'
           TabOrder = 2
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 188
           object Part_Number_Size: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '1'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1417,10 +1237,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 1.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
       end
@@ -1428,18 +1247,17 @@ object PrintForm: TPrintForm
         AlignWithMargins = True
         Left = 106
         Top = 4
-        Width = 399
+        Width = 559
         Height = 44
         Align = alClient
         Caption = 'InnerRightPanel'
         TabOrder = 2
         SkinData.SkinSection = 'PANEL'
-        ExplicitWidth = 387
         object Part_Number_Panel: TsEdit
           AlignWithMargins = True
           Left = 6
           Top = 6
-          Width = 387
+          Width = 547
           Height = 32
           Margins.Left = 5
           Margins.Top = 5
@@ -1466,22 +1284,18 @@ object PrintForm: TPrintForm
           BoundLabel.Layout = sclLeft
           BoundLabel.MaxWidth = 0
           BoundLabel.UseSkinColor = True
-          ExplicitWidth = 375
         end
       end
     end
     object sPanel59: TsPanel
       Left = 1
       Top = 157
-      Width = 721
+      Width = 881
       Height = 52
       Align = alTop
       Caption = 'InnerPanel'
       TabOrder = 7
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = 16
-      ExplicitTop = 47
-      ExplicitWidth = 709
       object sPanel60: TsPanel
         AlignWithMargins = True
         Left = 4
@@ -1515,14 +1329,13 @@ object PrintForm: TPrintForm
       end
       object Company_Option_Panel: TsPanel
         AlignWithMargins = True
-        Left = 511
+        Left = 671
         Top = 4
         Width = 206
         Height = 44
         Align = alRight
         TabOrder = 1
         SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 504
         object sPanel62: TsPanel
           AlignWithMargins = True
           Left = 71
@@ -1533,22 +1346,23 @@ object PrintForm: TPrintForm
           Caption = 'YPanel'
           TabOrder = 0
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 4
-          ExplicitHeight = 214
           object Company_Y: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '0'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1560,10 +1374,8 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel63: TsPanel
@@ -1576,21 +1388,23 @@ object PrintForm: TPrintForm
           Caption = 'XPanel'
           TabOrder = 1
           SkinData.SkinSection = 'PANEL'
-          ExplicitHeight = 214
           object Company_X: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '0'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1602,10 +1416,8 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel64: TsPanel
@@ -1618,21 +1430,23 @@ object PrintForm: TPrintForm
           Caption = 'SizePanel'
           TabOrder = 2
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 188
           object Company_Size: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '1'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1644,10 +1458,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 1.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
       end
@@ -1655,18 +1468,17 @@ object PrintForm: TPrintForm
         AlignWithMargins = True
         Left = 106
         Top = 4
-        Width = 399
+        Width = 559
         Height = 44
         Align = alClient
         Caption = 'InnerRightPanel'
         TabOrder = 2
         SkinData.SkinSection = 'PANEL'
-        ExplicitWidth = 387
         object Company_Panel: TsEdit
           AlignWithMargins = True
           Left = 6
           Top = 6
-          Width = 387
+          Width = 547
           Height = 32
           Margins.Left = 5
           Margins.Top = 5
@@ -1693,21 +1505,17 @@ object PrintForm: TPrintForm
           BoundLabel.Layout = sclLeft
           BoundLabel.MaxWidth = 0
           BoundLabel.UseSkinColor = True
-          ExplicitWidth = 375
         end
       end
     end
     object sPanel9: TsPanel
       Left = 1
       Top = 105
-      Width = 721
+      Width = 881
       Height = 52
       Align = alTop
       TabOrder = 8
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = 16
-      ExplicitTop = 47
-      ExplicitWidth = 709
       object sPanel27: TsPanel
         AlignWithMargins = True
         Left = 4
@@ -1727,14 +1535,13 @@ object PrintForm: TPrintForm
       end
       object QR_Option_Panel: TsPanel
         AlignWithMargins = True
-        Left = 511
+        Left = 671
         Top = 4
         Width = 206
         Height = 44
         Align = alRight
         TabOrder = 1
         SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 504
         object sPanel29: TsPanel
           AlignWithMargins = True
           Left = 71
@@ -1745,22 +1552,23 @@ object PrintForm: TPrintForm
           Caption = 'YPanel'
           TabOrder = 0
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 4
-          ExplicitHeight = 214
           object YEdit: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '50'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1772,10 +1580,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 50.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel34: TsPanel
@@ -1788,21 +1595,23 @@ object PrintForm: TPrintForm
           Caption = 'XPanel'
           TabOrder = 1
           SkinData.SkinSection = 'PANEL'
-          ExplicitHeight = 214
           object XEdit: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '50'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1814,10 +1623,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 50.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
         object sPanel35: TsPanel
@@ -1830,21 +1638,23 @@ object PrintForm: TPrintForm
           Caption = 'SizePanel'
           TabOrder = 2
           SkinData.SkinSection = 'PANEL'
-          ExplicitLeft = 188
           object SizeEdit: TsDecimalSpinEdit
             Left = 1
             Top = 1
             Width = 59
             Height = 34
             Align = alClient
+            Alignment = taCenter
             Color = clWhite
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -20
             Font.Name = 'Tahoma'
             Font.Style = []
+            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
+            Text = '4'
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1856,10 +1666,9 @@ object PrintForm: TPrintForm
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
             Increment = 1.000000000000000000
-            ExplicitLeft = 7
-            ExplicitTop = 8
-            ExplicitWidth = 121
-            ExplicitHeight = 21
+            Value = 4.000000000000000000
+            DecimalPlaces = 0
+            ExplicitHeight = 32
           end
         end
       end
@@ -1867,14 +1676,12 @@ object PrintForm: TPrintForm
     object sPanel36: TsPanel
       Left = 1
       Top = 53
-      Width = 721
+      Width = 881
       Height = 52
       Align = alTop
       Caption = 'InnerPanel'
       TabOrder = 9
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = 9
-      ExplicitTop = -1
       object sPanel66: TsPanel
         AlignWithMargins = True
         Left = 4
@@ -1896,26 +1703,29 @@ object PrintForm: TPrintForm
         AlignWithMargins = True
         Left = 106
         Top = 4
-        Width = 399
+        Width = 559
         Height = 44
         Align = alClient
         TabOrder = 1
         SkinData.SkinSection = 'PANEL'
         object TempEdit: TsDecimalSpinEdit
           AlignWithMargins = True
-          Left = 336
+          Left = 496
           Top = 4
           Width = 59
           Height = 36
           Align = alRight
+          Alignment = taCenter
           Color = clWhite
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -20
           Font.Name = 'Tahoma'
           Font.Style = []
+          NumbersOnly = True
           ParentFont = False
           TabOrder = 0
+          Text = '10'
           SkinData.SkinSection = 'EDIT'
           BoundLabel.Indent = 0
           BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -1927,33 +1737,31 @@ object PrintForm: TPrintForm
           BoundLabel.MaxWidth = 0
           BoundLabel.UseSkinColor = True
           Increment = 1.000000000000000000
-          ExplicitLeft = 3
-          ExplicitHeight = 34
+          Value = 10.000000000000000000
+          DecimalPlaces = 0
+          ExplicitHeight = 32
         end
       end
       object sPanel67: TsPanel
         AlignWithMargins = True
-        Left = 511
+        Left = 671
         Top = 4
         Width = 206
         Height = 44
         Align = alRight
         TabOrder = 2
         SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 504
       end
     end
     object sPanel72: TsPanel
       Left = 1
       Top = 1
-      Width = 721
+      Width = 881
       Height = 52
       Align = alTop
       Caption = 'InnerPanel'
       TabOrder = 10
       SkinData.SkinSection = 'PANEL'
-      ExplicitLeft = 561
-      ExplicitTop = 25
       object sPanel73: TsPanel
         AlignWithMargins = True
         Left = 4
@@ -1973,12 +1781,10 @@ object PrintForm: TPrintForm
         TabOrder = 0
         SkinData.CustomFont = True
         SkinData.SkinSection = 'PANEL'
-        ExplicitLeft = 76
-        ExplicitTop = 6
       end
       object sPanel74: TsPanel
         AlignWithMargins = True
-        Left = 511
+        Left = 671
         Top = 4
         Width = 206
         Height = 44
@@ -2044,11 +1850,220 @@ object PrintForm: TPrintForm
         AlignWithMargins = True
         Left = 106
         Top = 4
-        Width = 399
+        Width = 559
         Height = 44
         Align = alClient
         TabOrder = 2
         SkinData.SkinSection = 'PANEL'
+      end
+    end
+    object sPanel5: TsPanel
+      Left = 1
+      Top = 590
+      Width = 881
+      Height = 160
+      Align = alBottom
+      TabOrder = 11
+      SkinData.SkinSection = 'PANEL'
+      object sPanel16: TsPanel
+        AlignWithMargins = True
+        Left = 4
+        Top = 59
+        Width = 873
+        Height = 97
+        Align = alBottom
+        TabOrder = 0
+        SkinData.SkinSection = 'PANEL'
+        object sPanel40: TsPanel
+          AlignWithMargins = True
+          Left = 4
+          Top = 4
+          Width = 428
+          Height = 89
+          Align = alLeft
+          Caption = 'InnerLeftPanel'
+          TabOrder = 0
+          SkinData.SkinSection = 'PANEL'
+          object UIText: TMemo
+            AlignWithMargins = True
+            Left = 4
+            Top = 4
+            Width = 420
+            Height = 81
+            Align = alClient
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'UIText'
+            Font.Style = []
+            Lines.Strings = (
+              'Memo1')
+            ParentFont = False
+            TabOrder = 0
+          end
+        end
+        object sPanel47: TsPanel
+          AlignWithMargins = True
+          Left = 471
+          Top = 4
+          Width = 398
+          Height = 89
+          Align = alRight
+          TabOrder = 1
+          SkinData.SkinSection = 'PANEL'
+          object sPanel54: TsPanel
+            AlignWithMargins = True
+            Left = 135
+            Top = 4
+            Width = 133
+            Height = 81
+            Align = alClient
+            Caption = 'YPanel'
+            TabOrder = 0
+            SkinData.SkinSection = 'PANEL'
+            object LoadBtn: TButton
+              Left = 1
+              Top = 1
+              Width = 131
+              Height = 79
+              Align = alClient
+              Caption = #48520#47084#50724#44592
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -20
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+            end
+          end
+          object sPanel61: TsPanel
+            AlignWithMargins = True
+            Left = 4
+            Top = 4
+            Width = 125
+            Height = 81
+            Align = alLeft
+            Caption = 'XPanel'
+            TabOrder = 1
+            SkinData.SkinSection = 'PANEL'
+            object SaveBtn: TButton
+              Left = 1
+              Top = 1
+              Width = 123
+              Height = 79
+              Align = alClient
+              Caption = #51200#51109
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -20
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+              OnClick = SaveBtnClick
+            end
+          end
+          object sPanel68: TsPanel
+            AlignWithMargins = True
+            Left = 274
+            Top = 4
+            Width = 120
+            Height = 81
+            Align = alRight
+            Caption = 'SizePanel'
+            TabOrder = 2
+            SkinData.SkinSection = 'PANEL'
+            object PrintButton: TButton
+              Left = 1
+              Top = 1
+              Width = 118
+              Height = 79
+              Align = alClient
+              Caption = #54532#47536#53944#54616#44592
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -20
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+              OnClick = PrintButtonClick
+            end
+          end
+        end
+      end
+      object sPanel6: TsPanel
+        AlignWithMargins = True
+        Left = 4
+        Top = 4
+        Width = 873
+        Height = 49
+        Align = alClient
+        TabOrder = 1
+        SkinData.SkinSection = 'PANEL'
+        object sPanel7: TsPanel
+          AlignWithMargins = True
+          Left = 4
+          Top = 4
+          Width = 651
+          Height = 41
+          Align = alLeft
+          Caption = 'InnerLeftPanel'
+          TabOrder = 0
+          SkinData.SkinSection = 'PANEL'
+          object BarcodeRead: TMemo
+            Left = 1
+            Top = 1
+            Width = 649
+            Height = 39
+            Align = alClient
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            Lines.Strings = (
+              'Memo1')
+            ParentFont = False
+            TabOrder = 0
+          end
+        end
+        object sPanel8: TsPanel
+          AlignWithMargins = True
+          Left = 667
+          Top = 4
+          Width = 202
+          Height = 41
+          Align = alRight
+          TabOrder = 1
+          SkinData.SkinSection = 'PANEL'
+          object sPanel12: TsPanel
+            Left = 1
+            Top = 1
+            Width = 200
+            Height = 39
+            Align = alClient
+            Caption = 'YPanel'
+            TabOrder = 0
+            SkinData.SkinSection = 'PANEL'
+            object SQLSendBtn: TButton
+              Left = 1
+              Top = 1
+              Width = 198
+              Height = 37
+              Align = alClient
+              Caption = 'SQL'#47196' '#45936#51060#53552' '#51204#45804
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -20
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+            end
+          end
+        end
       end
     end
   end
@@ -3791,5 +3806,18 @@ object PrintForm: TPrintForm
     ThirdParty.ThirdStaticText = ' '
     Left = 280
     Top = 15
+  end
+  object ADOConnection1: TADOConnection
+    ConnectionString = 
+      'Provider=MSDASQL.1;Password=1111;Persist Security Info=True;User' +
+      ' ID=root;Data Source=data;Initial Catalog=ipsw'
+    Provider = 'MSDASQL.1'
+    Left = 352
+    Top = 16
+  end
+  object ADOQuery1: TADOQuery
+    Parameters = <>
+    Left = 416
+    Top = 16
   end
 end
