@@ -41,7 +41,7 @@
 			<PackageImports>DataSnapIndy10ServerTransport;bindcompfmx;fmx;rtl;dbrtl;IndySystem;DbxClientDriver;bindcomp;inetdb;DBXInterBaseDriver;DataSnapCommon;DataSnapClient;DataSnapServer;DataSnapProviderClient;xmlrtl;ibxpress;DbxCommonDriver;IndyProtocols;DBXMySQLDriver;dbxcds;soaprtl;bindengine;DBXOracleDriver;CustomIPTransport;dsnap;DBXInformixDriver;fmxase;IndyCore;DBXFirebirdDriver;inet;fmxobj;inetdbxpress;DBXSybaseASADriver;fmxdae;IPIndyImpl;dbexpress;$(PackageImports)</PackageImports>
 			<Multithreaded>true</Multithreaded>
 			<DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-			<AllPackageLibs>rtl.lib;vcl.lib;cyPackDXE2.lib;dbrtl.lib;vclimg.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;vcldb.lib;CPortLibD16.lib;acntDelphiXE2_R.lib</AllPackageLibs>
+			<AllPackageLibs>rtl.lib;vcl.lib;cyPackDXE2.lib;dbrtl.lib;vclimg.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;vcldb.lib;CPortLibD16.lib;acntDelphiXE2_R.lib;adortl.lib</AllPackageLibs>
 			<Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
 			<UsingDelphiRTL>true</UsingDelphiRTL>
 			<IncludePath>..\..\..\..\..\..\Public\Documents\RAD Studio\9.0\hpp\;Exercise\스위치 온오프\;..\..\..\..\Public\Documents\RAD Studio\9.0\hpp\;$(IncludePath)</IncludePath>
@@ -86,7 +86,7 @@
 		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
 			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
 			<VerInfo_Locale>1033</VerInfo_Locale>
-			<LinkPackageImports>rtl.bpi;vcl.bpi;cyPackDXE2.bpi;dbrtl.bpi;vclimg.bpi;xmlrtl.bpi;vclactnband.bpi;vclx.bpi;vcldb.bpi;CPortLibD16.bpi;acntDelphiXE2_R.bpi</LinkPackageImports>
+			<LinkPackageImports>rtl.bpi;vcl.bpi;cyPackDXE2.bpi;dbrtl.bpi;vclimg.bpi;xmlrtl.bpi;vclactnband.bpi;vclx.bpi;vcldb.bpi;CPortLibD16.bpi;acntDelphiXE2_R.bpi;adortl.bpi</LinkPackageImports>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_2)'!=''">
 			<Defines>NDEBUG;$(Defines)</Defines>
@@ -123,6 +123,10 @@
 				<FormType>dfm</FormType>
 				<DependentOn>PrintSystem.h</DependentOn>
 				<BuildOrder>6</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="SQL.cpp">
+				<DependentOn>SQL.h</DependentOn>
+				<BuildOrder>9</BuildOrder>
 			</CppCompile>
 			<CppCompile Include="SwichProgram.cpp">
 				<BuildOrder>0</BuildOrder>

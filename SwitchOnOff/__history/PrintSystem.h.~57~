@@ -145,12 +145,12 @@ __published:	// IDE-managed Components
 	TButton *PrintButton;
 	TsPanel *sPanel6;
 	TsPanel *sPanel7;
+	TMemo *BarcodeRead;
 	TsPanel *sPanel8;
 	TsPanel *sPanel12;
 	TButton *SQLSendBtn;
 	TADOConnection *ADOConnection1;
 	TADOQuery *ADOQuery1;
-	TsEdit *BarcodeRead;
 	void __fastcall PrintButtonClick(TObject *Sender);
 	void __fastcall Timer1Timer(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);

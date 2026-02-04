@@ -145,12 +145,12 @@ __published:	// IDE-managed Components
 	TButton *PrintButton;
 	TsPanel *sPanel6;
 	TsPanel *sPanel7;
+	TMemo *BarcodeRead;
 	TsPanel *sPanel8;
 	TsPanel *sPanel12;
 	TButton *SQLSendBtn;
 	TADOConnection *ADOConnection1;
 	TADOQuery *ADOQuery1;
-	TsEdit *BarcodeRead;
 	void __fastcall PrintButtonClick(TObject *Sender);
 	void __fastcall Timer1Timer(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
@@ -162,7 +162,6 @@ __published:	// IDE-managed Components
 	void __fastcall Product_4M_CheckboxClick(TObject *Sender);
 	void __fastcall Serial_CheckboxClick(TObject *Sender);
 	void __fastcall Date_CheckboxClick(TObject *Sender);
-	void __fastcall SQLSendBtnClick(TObject *Sender);
 private:	// User declarations
 	__fastcall TPrintForm::SetCheckBoxOptionVisible(AnsiString CheckBoxString, bool SetVisible);
 public:		// User declarations
