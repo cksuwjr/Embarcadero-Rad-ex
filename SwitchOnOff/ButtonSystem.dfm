@@ -1,9 +1,9 @@
-object Form1: TForm1
+object IOForm: TIOForm
   Left = 0
   Top = 0
   Caption = #51077#52636#47141' '#50672#49845' '#54532#47196#44536#47016
-  ClientHeight = 299
-  ClientWidth = 539
+  ClientHeight = 295
+  ClientWidth = 544
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

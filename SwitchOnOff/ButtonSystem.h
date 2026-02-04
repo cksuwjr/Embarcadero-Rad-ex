@@ -11,7 +11,7 @@
 #include "cyLed.hpp"
 #include <Vcl.ExtCtrls.hpp>
 //---------------------------------------------------------------------------
-class TForm1 : public TForm
+class TIOForm : public TForm
 {
 __published:	// IDE-managed Components
 	TLabel *Label1;
@@ -26,10 +26,19 @@ __published:	// IDE-managed Components
 	void __fastcall Output_Led_Click(TObject *Sender);
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations
+
 public:		// User declarations
-	__fastcall TForm1(TComponent* Owner);
+	__fastcall TIOForm(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm1 *Form1;
+extern PACKAGE TIOForm *IOForm;
 //---------------------------------------------------------------------------
+void Io_Init();
+void Io_Close();
+void Input_Check();
+void Output_Init();
+void Output_IO();
+bool Output_Process(int Output_Number, bool OnOff);
+
+
 #endif

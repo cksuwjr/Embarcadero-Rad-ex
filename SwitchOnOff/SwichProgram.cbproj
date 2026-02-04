@@ -37,14 +37,14 @@
 		<PropertyGroup Condition="'$(Base)'!=''">
 			<_TCHARMapping>wchar_t</_TCHARMapping>
 			<ProjectType>CppVCLApplication</ProjectType>
-			<ILINK_LibraryPath>Exercise\스위치 온오프\;..\..\..\..\Public\Documents\RAD Studio\9.0\hpp\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_LibraryPath>..\..\..\..\..\..\Public\Documents\RAD Studio\9.0\hpp\;Exercise\스위치 온오프\;..\..\..\..\Public\Documents\RAD Studio\9.0\hpp\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
 			<PackageImports>DataSnapIndy10ServerTransport;bindcompfmx;fmx;rtl;dbrtl;IndySystem;DbxClientDriver;bindcomp;inetdb;DBXInterBaseDriver;DataSnapCommon;DataSnapClient;DataSnapServer;DataSnapProviderClient;xmlrtl;ibxpress;DbxCommonDriver;IndyProtocols;DBXMySQLDriver;dbxcds;soaprtl;bindengine;DBXOracleDriver;CustomIPTransport;dsnap;DBXInformixDriver;fmxase;IndyCore;DBXFirebirdDriver;inet;fmxobj;inetdbxpress;DBXSybaseASADriver;fmxdae;IPIndyImpl;dbexpress;$(PackageImports)</PackageImports>
 			<Multithreaded>true</Multithreaded>
 			<DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-			<AllPackageLibs>rtl.lib;vcl.lib;cyPackDXE2.lib;dbrtl.lib;vclimg.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;vcldb.lib</AllPackageLibs>
+			<AllPackageLibs>rtl.lib;vcl.lib;cyPackDXE2.lib;dbrtl.lib;vclimg.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;vcldb.lib;CPortLibD16.lib;acntDelphiXE2_R.lib</AllPackageLibs>
 			<Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
 			<UsingDelphiRTL>true</UsingDelphiRTL>
-			<IncludePath>Exercise\스위치 온오프\;..\..\..\..\Public\Documents\RAD Studio\9.0\hpp\;$(IncludePath)</IncludePath>
+			<IncludePath>..\..\..\..\..\..\Public\Documents\RAD Studio\9.0\hpp\;Exercise\스위치 온오프\;..\..\..\..\Public\Documents\RAD Studio\9.0\hpp\;$(IncludePath)</IncludePath>
 			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
 			<DynamicRTL>true</DynamicRTL>
 			<UsePackages>true</UsePackages>
@@ -84,18 +84,28 @@
 			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-			<LinkPackageImports>rtl.bpi;vcl.bpi;cyPackDXE2.bpi;dbrtl.bpi;vclimg.bpi;xmlrtl.bpi;vclactnband.bpi;vclx.bpi;vcldb.bpi</LinkPackageImports>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<LinkPackageImports>rtl.bpi;vcl.bpi;cyPackDXE2.bpi;dbrtl.bpi;vclimg.bpi;xmlrtl.bpi;vclactnband.bpi;vclx.bpi;vcldb.bpi;CPortLibD16.bpi;acntDelphiXE2_R.bpi</LinkPackageImports>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_2)'!=''">
 			<Defines>NDEBUG;$(Defines)</Defines>
 			<TASM_Debugging>None</TASM_Debugging>
 		</PropertyGroup>
 		<ItemGroup>
+			<CppCompile Include="Barcode.cpp">
+				<DependentOn>Barcode.h</DependentOn>
+				<BuildOrder>8</BuildOrder>
+			</CppCompile>
 			<CppCompile Include="ButtonSystem.cpp">
-				<Form>Form1</Form>
+				<Form>IOForm</Form>
 				<FormType>dfm</FormType>
 				<DependentOn>ButtonSystem.h</DependentOn>
 				<BuildOrder>1</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="Common.cpp">
+				<DependentOn>Common.h</DependentOn>
+				<BuildOrder>7</BuildOrder>
 			</CppCompile>
 			<LibFiles Condition="'$(Platform)'=='Win32'" Include="convert-pci.lib">
 				<BuildOrder>3</BuildOrder>
@@ -108,12 +118,19 @@
 				<BuildOrder>4</BuildOrder>
 				<IgnorePath>true</IgnorePath>
 			</LibFiles>
+			<CppCompile Include="PrintSystem.cpp">
+				<Form>PrintForm</Form>
+				<FormType>dfm</FormType>
+				<DependentOn>PrintSystem.h</DependentOn>
+				<BuildOrder>6</BuildOrder>
+			</CppCompile>
 			<CppCompile Include="SwichProgram.cpp">
 				<BuildOrder>0</BuildOrder>
 			</CppCompile>
 			<None Include="Var.h">
 				<BuildOrder>5</BuildOrder>
 			</None>
+			<FormResources Include="PrintSystem.dfm"/>
 			<FormResources Include="ButtonSystem.dfm"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
@@ -167,6 +184,12 @@
 					<Source>
 						<Source Name="MainSource">SwichProgram.cpp</Source>
 					</Source>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k160.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp160.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp160.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
 				</CPlusPlusBuilder.Personality>
 				<Deployment/>
 				<Platforms>

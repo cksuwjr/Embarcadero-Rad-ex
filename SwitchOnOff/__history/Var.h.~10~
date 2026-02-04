@@ -1,0 +1,41 @@
+
+#ifndef VARIABLE
+
+#define MAX_INPUT_COUNT		16
+#define MAX_OUTPUT_COUNT	16
+
+
+// 스위치 데이터
+bool	Input_Data[MAX_INPUT_COUNT];
+bool	Output_Data[MAX_OUTPUT_COUNT];
+
+
+// Print 정의
+enum
+{
+	STEP_INIT = 0,
+	STEP_PRINT_ONE,
+	STEP_PRINT_SET,
+	STEP_PRINT_SET_DELAY,
+	STEP_END
+};
+
+
+#endif
+
+
+// 기존 코드는
+
+/*
+
+
+#ifndef varH
+#define varH
+
+#endif
+
+로 감싸는 이유
+
+==> 한번만 포함시키기 위해서, 여러번 포함될 경우 정의가 여럿 생긴다
+
+*/

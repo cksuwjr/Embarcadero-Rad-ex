@@ -1,0 +1,27 @@
+
+#ifndef VARIABLE
+
+#define MAX_INPUT_COUNT		16
+#define MAX_OUTPUT_COUNT	16
+
+bool	Input_Data[MAX_INPUT_COUNT];
+bool	Output_Data[MAX_OUTPUT_COUNT];
+
+#endif
+
+
+// 기존 코드는
+
+/*
+
+
+#ifndef varH
+#define varH
+
+#endif
+
+로 감싸는 이유
+
+==> 한번만 포함시키기 위해서, 여러번 포함될 경우 정의가 여럿 생긴다
+
+*/
