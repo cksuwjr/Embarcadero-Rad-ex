@@ -1846,20 +1846,13 @@ object PrintForm: TPrintForm
           SkinData.SkinSection = 'PANEL'
         end
       end
-      object Model_Name_Panel: TsPanel
+      object sPanel78: TsPanel
         AlignWithMargins = True
         Left = 106
         Top = 4
         Width = 559
         Height = 44
         Align = alClient
-        Caption = #47784#45944' '#51060#47492
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -27
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
         TabOrder = 2
         SkinData.SkinSection = 'PANEL'
       end
@@ -1942,7 +1935,6 @@ object PrintForm: TPrintForm
               Font.Style = []
               ParentFont = False
               TabOrder = 0
-              OnClick = LoadBtnClick
             end
           end
           object sPanel61: TsPanel
@@ -2034,7 +2026,6 @@ object PrintForm: TPrintForm
             Font.Style = []
             ParentFont = False
             TabOrder = 0
-            OnChange = BarcodeReadChange
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET
@@ -2045,6 +2036,9 @@ object PrintForm: TPrintForm
             BoundLabel.Layout = sclLeft
             BoundLabel.MaxWidth = 0
             BoundLabel.UseSkinColor = True
+            ExplicitLeft = 368
+            ExplicitTop = 20
+            ExplicitWidth = 121
             ExplicitHeight = 21
           end
         end
@@ -2090,7 +2084,7 @@ object PrintForm: TPrintForm
   object Timer1: TTimer
     Interval = 10
     OnTimer = Timer1Timer
-    Left = 96
+    Left = 128
     Top = 15
   end
   object ComPort1: TComPort
@@ -2108,7 +2102,7 @@ object PrintForm: TPrintForm
     FlowControl.XonXoffIn = False
     StoredProps = [spBasic]
     TriggersOnRxChar = True
-    Left = 144
+    Left = 176
     Top = 15
   end
   object sSkinProvider1: TsSkinProvider
@@ -2120,8 +2114,8 @@ object PrintForm: TPrintForm
     SkinData.SkinManager = sSkinManager1
     SkinData.SkinSection = 'FORM'
     TitleButtons = <>
-    Left = 216
-    Top = 63
+    Left = 224
+    Top = 15
   end
   object sSkinManager1: TsSkinManager
     InternalSkins = <
@@ -3824,28 +3818,20 @@ object PrintForm: TPrintForm
     ThirdParty.ThirdUpDown = ' '
     ThirdParty.ThirdScrollBar = ' '
     ThirdParty.ThirdStaticText = ' '
-    Left = 288
-    Top = 63
+    Left = 280
+    Top = 15
   end
   object ADOConnection1: TADOConnection
     ConnectionString = 
       'Provider=MSDASQL.1;Password=1111;Persist Security Info=True;User' +
       ' ID=root;Data Source=data;Initial Catalog=ipsw'
-    CursorLocation = clUseServer
     Provider = 'MSDASQL.1'
-    Left = 312
+    Left = 352
+    Top = 16
   end
   object ADOQuery1: TADOQuery
-    Connection = ADOConnection1
     Parameters = <>
-    Left = 384
-  end
-  object OpenDialog: TsOpenDialog
-    Left = 528
-    Top = 8
-  end
-  object SaveDialog: TsSaveDialog
-    Left = 584
-    Top = 8
+    Left = 416
+    Top = 16
   end
 end

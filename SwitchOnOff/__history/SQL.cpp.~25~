@@ -36,10 +36,7 @@ void Send_SQL(AnsiString str)
 	else
 		PrintForm->ADOQuery1->Active = true;
 
-	if(SQL_Result)
-		PrintForm->BarcodeRead->Text = "";
-
-	PrintForm->BarcodeRead->SetFocus();
+	if(SQL_Result) PrintForm->BarcodeRead->Text = "";
 
 }
 
@@ -52,7 +49,7 @@ void SQL_Data_Save()
 	Str = "insert into ipsw.new_table (NO, MODEL_NAME, TIME, BARCODE) values (NULL, ";
 
 	Str += "'";
-	Str += PrintForm->Model_Name_Panel->Caption;
+	Str += PrintForm->Part_Number_Panel->Text;
 	Str += "',";
 
 	Str += "'";

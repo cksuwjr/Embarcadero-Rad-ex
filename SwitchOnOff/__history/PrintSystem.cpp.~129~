@@ -25,7 +25,6 @@
 #pragma link "sCheckBox"
 #pragma link "sPanel"
 #pragma link "sGroupBox"
-#pragma link "sDialogs"
 #pragma resource "*.dfm"
 TPrintForm *PrintForm;
 //---------------------------------------------------------------------------
@@ -302,14 +301,7 @@ void __fastcall TPrintForm::FormClose(TObject *Sender, TCloseAction &Action)
 
 void __fastcall TPrintForm::SaveBtnClick(TObject *Sender)
 {
-	SaveDialog->FileName = "";
-	SaveDialog->DefaultExt = "*.SPEC";
-	SaveDialog->InitialDir = SPEC_PATH;
-	SaveDialog->Filter = "SPEC FILE (*.spc)|*.spc";
-
-	if(SaveDialog->Execute())
-		Model_Save(SaveDialog->FileName);
-	//Model_Save("C:\Users\user\Desktop\새 폴더");
+	Model_Save("C:\Users\user\Desktop\새 폴더");
 }
 //---------------------------------------------------------------------------
 
@@ -371,37 +363,8 @@ void __fastcall TPrintForm::LoadBtnClick(TObject *Sender)
 
 	if(OpenDialog->Execute())
 	{
-		Model_Open(OpenDialog->FileName);
+        Model_Open(OpenDialog->FileName);
     }
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TPrintForm::BarcodeReadChange(TObject *Sender)
-{
-	// 값 읽어옴
-	AnsiString scanned = PrintForm->BarcodeRead->Text;
-	scanned = UpperCase(scanned);
-
-
-	// 업체코드
-	AnsiString Company_Panel_value = scanned.SubString(scanned.Pos("V") + 1, 4);
-	Company_Panel->Text = Company_Panel_value;
-
-	// 부품번호
-	AnsiString Part_Number_value = scanned.SubString(scanned.Pos("P") + 1, 10);
-	Part_Number_Panel->Text = Part_Number_value;
-
-	// 서열코드
-	AnsiString Alc_Panel_value = scanned.SubString(scanned.Pos("S") + 1, 4);
-	Alc_Panel->Text = Alc_Panel_value;
-
-	// 부품4M
-	AnsiString Product_4M_Panel_value = scanned.SubString(scanned.Pos("S") + 1 + 4 + 6, 4);
-	Product_4M_Panel->Text = Product_4M_Panel_value;
-
-	// LOT
-	AnsiString Lot_value = scanned.SubString(scanned.Pos("S") + 1 + 4 + 6 + 4 + 1, 1);
-	Lot_Panel->Text = Lot_value;
 }
 //---------------------------------------------------------------------------
 

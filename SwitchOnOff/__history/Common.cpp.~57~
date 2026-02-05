@@ -69,7 +69,7 @@ void Model_Save(AnsiString FilePath)
 		return;
 	}
 
-	//__BARCODE_SPEC Barcode_Spec;
+	__BARCODE_SPEC Barcode_Spec;
 
 	memset(&Barcode_Spec, 0, sizeof(Barcode_Spec));
 
@@ -90,6 +90,7 @@ void Model_Save(AnsiString FilePath)
 	fclose(fp);
 
 	Recent_Model_Save(FilePath);
+
 }
 
 void Model_Open(AnsiString FilePath)
@@ -104,7 +105,7 @@ void Model_Open(AnsiString FilePath)
 		return;
 	}
 
-	//__BARCODE_SPEC Barcode_Spec;
+	__BARCODE_SPEC Barcode_Spec;
 
 	memset(&Barcode_Spec, 0, sizeof(Barcode_Spec));
 	fread(&Barcode_Spec, sizeof(Barcode_Spec), 1, fp);
@@ -207,11 +208,14 @@ void PrintBarcode()
 
 	int Count;
 
-	Count = Count_File->ReadInteger("BARCODE", PrintForm->Model_Name_Panel->Caption + Date, 0) + 1;
-	Count_File->WriteInteger("BARCODE", PrintForm->Model_Name_Panel->Caption + Date, Count);
 
-	AnsiString tex = IntToStr(Count);
-	OutputDebugStringA(tex.c_str());
+	/*
+	// 혅재 부품 번호 기준으로 하였음(모델 이름이 아님)
+	Count = Count_File->ReadInteger("BARCODE", PrintForm->Part_Number_Panel->Text + Date, 0) + 1;
+	*/
+
+	Count = Count_File->ReadInteger("BARCODE", PrintForm->Model_Name_Panel->Caption + Date, 0) + 1;
+	Count_File->WriteInteger("BARCODE", PrintForm->Part_Number_Panel->Text + Date, Count);
 
 
 	Barcode_Data3.sprintf("T%s%s%s%07d", date, Barcode_Spec.Product_4M, Barcode_Spec.Lot, 10000 + Count); // Serial : 10000 + n

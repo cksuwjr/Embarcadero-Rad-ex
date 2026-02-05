@@ -36,10 +36,7 @@ void Send_SQL(AnsiString str)
 	else
 		PrintForm->ADOQuery1->Active = true;
 
-	if(SQL_Result)
-		PrintForm->BarcodeRead->Text = "";
-
-	PrintForm->BarcodeRead->SetFocus();
+	if(SQL_Result) PrintForm->BarcodeRead->Text = "";
 
 }
 

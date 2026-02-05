@@ -380,8 +380,6 @@ void __fastcall TPrintForm::BarcodeReadChange(TObject *Sender)
 {
 	// 값 읽어옴
 	AnsiString scanned = PrintForm->BarcodeRead->Text;
-	scanned = UpperCase(scanned);
-
 
 	// 업체코드
 	AnsiString Company_Panel_value = scanned.SubString(scanned.Pos("V") + 1, 4);
@@ -400,7 +398,7 @@ void __fastcall TPrintForm::BarcodeReadChange(TObject *Sender)
 	Product_4M_Panel->Text = Product_4M_Panel_value;
 
 	// LOT
-	AnsiString Lot_value = scanned.SubString(scanned.Pos("S") + 1 + 4 + 6 + 4 + 1, 1);
+	AnsiString Lot_value = scanned.SubString(scanned.Pos("S") + 1 + 4 + 6 + 4, 1);
 	Lot_Panel->Text = Lot_value;
 }
 //---------------------------------------------------------------------------
