@@ -2034,7 +2034,6 @@ object PrintForm: TPrintForm
             Font.Style = []
             ParentFont = False
             TabOrder = 0
-            OnChange = BarcodeReadChange
             SkinData.SkinSection = 'EDIT'
             BoundLabel.Indent = 0
             BoundLabel.Font.Charset = DEFAULT_CHARSET

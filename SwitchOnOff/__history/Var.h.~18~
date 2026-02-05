@@ -29,11 +29,8 @@ enum
 
 // 세이브 시스템
 
-
 #define SYSTEM_FILE "C:\\Users\\user\\Desktop\\DataExercise\\Hi.ini"
 #define COUNT_FILE "C:\\Users\\user\\Desktop\\DataExercise\\Count.ini"
-
-#define SPEC_PATH "C:\\Users\\user\\Desktop\\DataExercise\\"
 
 typedef struct __Barcode_SPEC__
 {

@@ -20,26 +20,11 @@ void Send_SQL(AnsiString str)
 	PrintForm->ADOQuery1->SQL->Clear();
 	PrintForm->ADOQuery1->SQL->Add(str);
 
-	bool SQL_Result = true;
 
 	if(str.Pos("insert") ||str.Pos("update") || str.Pos("alter") || str.Pos("delete"))
-	{
-		try
-		{
-			PrintForm->ADOQuery1->ExecSQL();
-		}
-		catch(Exception &e)
-		{
-			SQL_Result = false;
-		}
-	}
+		PrintForm->ADOQuery1->ExecSQL();
 	else
 		PrintForm->ADOQuery1->Active = true;
-
-	if(SQL_Result)
-		PrintForm->BarcodeRead->Text = "";
-
-	PrintForm->BarcodeRead->SetFocus();
 
 }
 
@@ -52,7 +37,7 @@ void SQL_Data_Save()
 	Str = "insert into ipsw.new_table (NO, MODEL_NAME, TIME, BARCODE) values (NULL, ";
 
 	Str += "'";
-	Str += PrintForm->Model_Name_Panel->Caption;
+	Str += PrintForm->Part_Number_Panel->Text;
 	Str += "',";
 
 	Str += "'";

@@ -18,8 +18,6 @@
 #include "sGroupBox.hpp"
 #include <Data.DB.hpp>
 #include <Data.Win.ADODB.hpp>
-#include "sDialogs.hpp"
-#include <Vcl.Dialogs.hpp>
 //---------------------------------------------------------------------------
 class TPrintForm : public TForm
 {
@@ -125,7 +123,7 @@ __published:	// IDE-managed Components
 	TsPanel *sPanel75;
 	TsPanel *sPanel76;
 	TsPanel *sPanel77;
-	TsPanel *Model_Name_Panel;
+	TsPanel *sPanel78;
 	TsPanel *sPanel67;
 	TsPanel *Date_Option_Panel;
 	TsPanel *sPanel13;
@@ -153,8 +151,6 @@ __published:	// IDE-managed Components
 	TADOConnection *ADOConnection1;
 	TADOQuery *ADOQuery1;
 	TsEdit *BarcodeRead;
-	TsOpenDialog *OpenDialog;
-	TsSaveDialog *SaveDialog;
 	void __fastcall PrintButtonClick(TObject *Sender);
 	void __fastcall Timer1Timer(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
@@ -167,8 +163,6 @@ __published:	// IDE-managed Components
 	void __fastcall Serial_CheckboxClick(TObject *Sender);
 	void __fastcall Date_CheckboxClick(TObject *Sender);
 	void __fastcall SQLSendBtnClick(TObject *Sender);
-	void __fastcall LoadBtnClick(TObject *Sender);
-	void __fastcall BarcodeReadChange(TObject *Sender);
 private:	// User declarations
 	__fastcall TPrintForm::SetCheckBoxOptionVisible(AnsiString CheckBoxString, bool SetVisible);
 public:		// User declarations

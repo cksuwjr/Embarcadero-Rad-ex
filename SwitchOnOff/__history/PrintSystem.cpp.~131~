@@ -376,32 +376,3 @@ void __fastcall TPrintForm::LoadBtnClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TPrintForm::BarcodeReadChange(TObject *Sender)
-{
-	// 값 읽어옴
-	AnsiString scanned = PrintForm->BarcodeRead->Text;
-	scanned = UpperCase(scanned);
-
-
-	// 업체코드
-	AnsiString Company_Panel_value = scanned.SubString(scanned.Pos("V") + 1, 4);
-	Company_Panel->Text = Company_Panel_value;
-
-	// 부품번호
-	AnsiString Part_Number_value = scanned.SubString(scanned.Pos("P") + 1, 10);
-	Part_Number_Panel->Text = Part_Number_value;
-
-	// 서열코드
-	AnsiString Alc_Panel_value = scanned.SubString(scanned.Pos("S") + 1, 4);
-	Alc_Panel->Text = Alc_Panel_value;
-
-	// 부품4M
-	AnsiString Product_4M_Panel_value = scanned.SubString(scanned.Pos("S") + 1 + 4 + 6, 4);
-	Product_4M_Panel->Text = Product_4M_Panel_value;
-
-	// LOT
-	AnsiString Lot_value = scanned.SubString(scanned.Pos("S") + 1 + 4 + 6 + 4 + 1, 1);
-	Lot_Panel->Text = Lot_value;
-}
-//---------------------------------------------------------------------------
-
