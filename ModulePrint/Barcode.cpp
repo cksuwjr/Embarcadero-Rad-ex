@@ -1,0 +1,37 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Barcode.h"
+#include "var.h"
+#include "Stdio.h"
+#include "Main.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+void Zebra_Init(TComPort *port, int temp)
+{
+	port->WriteStr("^XA\r\n");
+	AnsiString Str = "";
+	Str = Str.sprintf("^MD%d\r\n", temp);
+	port->WriteStr(Str);
+}
+
+void Zebra_Barcode_DataMatrix(TComPort *port, AnsiString barcode, int x, int y, int size)
+{
+	char s[200] = {0, };
+
+	sprintf_s(s, sizeof(s), "^FO%d,%d\r\n", x, y); // 위치 FO %d, %d
+	port->WriteStr(s);
+
+	sprintf_s(s, sizeof(s), "^BXN, %d, 200,,,5,,\r\n", size); // BX 방향, 크기, 열, 행, ECC type, 탈출시퀀스
+	port->WriteStr(s);
+
+	sprintf_s(s, sizeof(s), "^FH_^FD%s^FS\r\n", barcode);
+	port->WriteStr(s);
+}
+
+void Zebra_Execute(TComPort *port)
+{
+	port->WriteStr("^XZ\r\n");
+}

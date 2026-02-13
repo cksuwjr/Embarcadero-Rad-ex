@@ -1,0 +1,19 @@
+//---------------------------------------------------------------------------
+
+#ifndef PrintH
+#define PrintH
+//---------------------------------------------------------------------------
+#include <vcl.h>
+
+extern bool Printing;
+extern TTimer *Timer1;
+extern TComPort *ComPort1;
+
+
+void Print_Process();
+void Change_PrintStep(int PrintStep);
+void Test_Barcode_Print();
+void PrintStart();
+void PrintBarcode();
+
+#endif

@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#ifndef CommonH
+#define CommonH
+//---------------------------------------------------------------------------
+#include <System.hpp>
+
+void System_Save();
+void System_Load();
+void PrintBarcode();
+void Recent_Model_Save(AnsiString FileName);
+AnsiString Recent_Model_Open();
+void Model_Save(AnsiString FilePath);
+void Model_Open(AnsiString FilePath);
+void Barcode_Model_Open(AnsiString FilePath);
+#endif

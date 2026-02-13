@@ -1,0 +1,15 @@
+//---------------------------------------------------------------------------
+
+#ifndef PrintH
+#define PrintH
+//---------------------------------------------------------------------------
+
+extern bool Printing;
+
+void Print_Process();
+void Change_PrintStep(int PrintStep);
+void Test_Barcode_Print();
+void PrintStart();
+void PrintBarcode();
+
+#endif

@@ -1,0 +1,11 @@
+//---------------------------------------------------------------------------
+
+#ifndef BarcodeH
+#define BarcodeH
+//---------------------------------------------------------------------------
+
+void Zebra_Init(TComport *port, int temp);
+void Zebra_Barcode_DataMatrix(TComport *port, AnsiString barcode, int x, int y, int size);
+void Zebra_Execute(TComPort *port);
+
+#endif

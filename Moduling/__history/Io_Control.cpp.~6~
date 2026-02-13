@@ -1,0 +1,88 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Io_Control.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+int Card_7230;
+
+void Io_Init()
+{
+	Card_7230 = -1;
+
+	Card_7230 = Register_Card(PCI_7230, 0);
+
+	if(Card_7230 < 0) return;
+
+	Output_Init();
+}
+
+void Io_Close()
+{
+	Output_Init();
+
+	Release_Card(Card_7230);
+}
+
+#pragma region __입력__
+
+void Input_Check()
+{
+	U32 DIValue = 0x00;
+
+	if(Card_7230 >= 0)
+		DI_ReadPort(Card_7230, 0, &DIValue);
+
+	for(int i = 0; i < MAX_INPUT_COUNT; i++)
+		Input_Data[i] = DIValue & (0x01 << i);
+
+}
+
+#pragma endregion __입력__
+
+
+#pragma region __출력__
+
+void Output_IO()
+{
+	U32 DoValue = 0x00;
+
+	for(int i = 0; i < MAX_OUTPUT_COUNT; i++)
+		if(Output_Data[i])
+			DoValue = DoValue | (0x01 << i);
+
+	if(Card_7230 >= 0)
+		DO_WritePort(Card_7230, 0, DoValue);
+
+}
+
+#pragma endregion __출력__
+
+
+#pragma region __작업__
+
+bool Output_Process(int Output_Number, bool OnOff)
+{
+	Input_Check();
+
+	Output_Data[Output_Number] = OnOff;
+
+	Output_IO();
+
+	return true;
+}
+
+#pragma endregion __작업__
+
+
+// 출력값 0으로 초기화
+
+void Output_Init()
+{
+	memset(&Output_Data, 0, sizeof(Output_Data));
+
+	Output_IO();
+}

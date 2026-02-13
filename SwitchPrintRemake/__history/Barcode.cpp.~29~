@@ -1,0 +1,79 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#innclude "PrintSystem.h"
+#include "Barcode.h"
+#include "Var.h"
+#include "Stdio.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+
+
+void Zebra_Init(TComPort *port, int temp)
+{
+	port->WriteStr("^XA\r\n");
+	AnsiString Str = "";
+	Str = Str.sprintf("^MD%d\r\n", temp);
+	port->WriteStr(Str);
+}
+
+void Zebra_Barcode_DataMatrix(TComPort *port)
+{
+
+	char s[200] = {0, };
+
+	/*
+
+	// 좌표
+	// Field Origin (+x, +y)    : ^ FOx,y \r\n
+	sprintf_s(s, sizeof(s), "^FO50,50\r\n");
+	port->WriteStr(s);
+
+	// DataMatrix
+	// ^BQN : 데이터 매트릭스를 바코드 형태로 그리겠다.
+	// : ^BQN, 모델, 확대 => BQN,model,size
+	sprintf_s(s, sizeof(s), "^BQN,2,6\r\n");
+	port->WriteStr(s);
+
+	// 데이터
+	// ^FD : 출력할 데이터,
+	// FDLA 에서 LA : 데이터 매트릭스 인코딩 방식 접두어 (바코드 안에 들어가는 데이터 선언자)
+	// asdf : 실제 바코드에 들어갈 데이터
+	// ^FS : 필드 종료
+	sprintf_s(s, sizeof(s), "^FDLA,asdf^FS\r\n");
+	port->WriteStr(s);
+
+	*/
+
+
+
+	sprintf_s(s, sizeof(s), "^FO%d,%d\r\n", StrToIntDef(XEdit->Text, 0), StrToIntDef(YEdit->Text, 0));
+	port->WriteStr(s);
+
+	sprintf_s(s, sizeof(s), "^BXN,%d,200,,,5,,\r\n", SizeEdit->Value);
+	// "^BX o, h, s, c, r, f, g
+	// "^BX 방향O, 크기H, 심볼크기(데이터길이)S, 열개수(자동0)C, 행개수(자동0)R, ECC타입F, 탈출 시퀀스G
+	port->WriteStr(s);
+
+	sprintf_s(s, sizeof(s), "^FH_^FD%s^FS\r\n", "_41_42_43");
+	port->WriteStr(s);
+
+	//port->WriteStr(AnsiString(s));
+
+
+					  // FH : Field Hex Indicator : _xx형태를 16진수 바이트로 해석
+	/*
+	sprintf_s(s, sizeof(s), "^FDLA,asdf^FS\r\n");
+	port->WriteStr(s);
+	*/
+
+	//sprintf_s(s, "^FH_^FD%s^FS\r\n", "");
+	//port->WriteStr(s);
+}
+
+void Zebra_Execute(TComPort *port)
+{
+	port->WriteStr("^XZ\r\n");
+}
