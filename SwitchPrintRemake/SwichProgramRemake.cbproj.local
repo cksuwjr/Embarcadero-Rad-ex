@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.314,C:\Users\user\Documents\RAD Studio\Projects\Exercise\스위치 온오프\SwichProgram.cbproj=C:\Users\user\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.548,=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.075,=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.410,C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.h=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Barcode.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.838,C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\SQL.cpp=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.464,C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Common.cpp=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.890,C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchPrintRemake\SwichProgramRemake.cbproj=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchPrintRemake\SwichProgram.cbproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.196,=C:\Users\user\Documents\RAD Studio\Projects\Exercise\스위치 온오프\convert-pci.lib</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.080,C:\Users\user\Documents\RAD Studio\Projects\Exercise\스위치 온오프\ButtonSystem.dfm=C:\Users\user\Documents\RAD Studio\Projects\ButtonSystem.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.519,C:\Users\user\Documents\RAD Studio\Projects\ButtonSystem.dfm=C:\Users\user\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.080,C:\Users\user\Documents\RAD Studio\Projects\Exercise\스위치 온오프\ButtonSystem.h=C:\Users\user\Documents\RAD Studio\Projects\ButtonSystem.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.156,=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.284,=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.410,C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.cpp=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Barcode.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.514,=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\File1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.515,C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\PrintSystem.dfm=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.515,C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\PrintSystem.h=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.214,=C:\Users\user\Documents\RAD Studio\Projects\Exercise\스위치 온오프\pdask_bc.lib</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.464,C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Common.h=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.498,C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Var.h=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\File1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.838,C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\SQL.h=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.976,=C:\Users\user\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.519,C:\Users\user\Documents\RAD Studio\Projects\ButtonSystem.h=C:\Users\user\Documents\RAD Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.515,C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\PrintSystem.cpp=C:\Users\user\Documents\RAD Studio\Projects\Exercise\SwitchOnOff\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.080,C:\Users\user\Documents\RAD Studio\Projects\Exercise\스위치 온오프\ButtonSystem.cpp=C:\Users\user\Documents\RAD Studio\Projects\ButtonSystem.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.667,=C:\Users\user\Documents\RAD Studio\Projects\Exercise\스위치 온오프\File1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.601,C:\Users\user\Documents\RAD Studio\Projects\Exercise\스위치 온오프\File1.h=C:\Users\user\Documents\RAD Studio\Projects\Exercise\스위치 온오프\Dask.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.519,C:\Users\user\Documents\RAD Studio\Projects\ButtonSystem.cpp=C:\Users\user\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

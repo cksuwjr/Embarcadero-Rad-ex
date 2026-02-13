@@ -1,0 +1,17 @@
+#ifndef _varh
+#define _varh
+
+// 헤더 포함
+#include "Io_Control.h"
+#include "Dask.h"
+
+
+// 스위치 데이터
+
+#define MAX_INPUT_COUNT 16
+#define MAX_OUTPUT_COUNT 16
+
+extern bool Input_Data[MAX_INPUT_COUNT];
+extern bool Output_Data[MAX_OUTPUT_COUNT];
+
+#endif

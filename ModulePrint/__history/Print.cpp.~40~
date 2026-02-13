@@ -1,0 +1,189 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Print.h"
+#include <vcl.h>
+#include "var.h"
+#include "Main.h"
+#include "Barcode.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+
+
+int Print_Step;
+//bool Printing;
+bool Print_Mode;
+int Print_i;
+bool Print_End;
+
+DWORD Print_Tick;
+DWORD Print_Delay_Time;
+
+int Print_Time;
+int Print_Count;
+int Delay_Time;
+
+
+__BARCODE_SPEC Barcode_Spec;
+
+void Print_Process()
+{
+	switch (Print_Step)
+	{
+		case STEP_INIT:
+			Print_i = 0;
+			Print_End = false;
+
+			if(Print_Mode == ONE)
+				Change_PrintStep(STEP_PRINT_ONE);
+			else if(Print_Mode == SET)
+				Change_PrintStep(STEP_PRINT_SET);
+			else
+				Change_PrintStep(STEP_PRINT_ONE);
+
+			Print_Tick = GetTickCount();
+			break;
+
+		case STEP_PRINT_ONE:
+			if(!Print_End)
+			{
+				Test_Barcode_Print();
+				Print_End = true;
+			}
+
+			if(GetTickCount() - Print_Tick > Print_Time)
+			{
+				Change_PrintStep(STEP_END);
+			}
+			break;
+
+		case STEP_PRINT_SET:
+			Test_Barcode_Print();
+			Print_i++;
+
+			Print_End = (Print_i >= Print_Count);
+
+			Change_PrintStep(STEP_PRINT_SET_DELAY);
+			break;
+
+		case STEP_END:
+			if(GetTickCount() - Print_Tick > DELAY_TIME)
+			{
+				if(GetTickCount() - Print_Tick > 300)
+				{
+					Printing = false;
+
+					Form1->Timer1->Enabled = false;
+				}
+			}
+			break;
+	}
+}
+
+void Change_PrintStep(int PrintStep)
+{
+	Print_Step = PrintStep;
+	Print_Tick = GetTickCount();
+}
+
+void Test_Barcode_Print()
+{
+	Printing = false;
+
+	PrintBarcode();
+}
+
+void PrintStart()
+{
+	Form1->Timer1->Enabled = true;
+
+	Print_Mode = ONE;
+	Change_PrintStep(STEP_INIT);
+	Printing = true;
+}
+
+void PrintSetStart()
+{
+	Form1->Timer1->Enabled = true;
+
+	Print_Mode = SET;
+	Print_Count = 3;
+	Change_PrintStep(STEP_INIT);
+	Printing = true;
+}
+
+// 실제 출력 담당
+void PrintBarcode()
+{
+	OutputDebugString(L"바코드 프린팅..\n");
+
+	Zebra_Init(Form1->ComPort1, 10); // 온도
+
+	AnsiString Barcode_Data, Barcode_Data1, Barcode_Data2, Barcode_Data3;
+
+	//////////////////
+
+	char* date;
+	AnsiString Date;
+
+	unsigned short Year, Month, Day;
+	unsigned short Hour, Minute, Second, mSecond;
+
+	Now().DecodeDate(&Year, &Month, &Day);
+	Now().DecodeTime(&Hour, &Minute, &Second, &mSecond);
+
+	Date = Date.sprintf("%02d%02d%02d", Year - 2000, Month, Day);
+
+	date = Date.c_str();
+
+
+
+	memset(&Barcode_Spec, 0, sizeof(Barcode_Spec));
+
+	strcpy(Barcode_Spec.Company, "ASDC");
+	strcpy(Barcode_Spec.Part_Number, "1234");
+	//////////////////
+
+
+	Barcode_Data = "";
+	Barcode_Data.sprintf
+	(
+		"[)>06V%sP%s",
+		Barcode_Spec.Company,
+		Barcode_Spec.Part_Number
+	);
+
+	if(strlen(Barcode_Spec.Alc)) Barcode_Data1.sprintf("S%s", Barcode_Spec.Alc);
+	if(strlen(Barcode_Spec.Eo)) Barcode_Data2.sprintf("E%s", Barcode_Spec.Eo);
+
+
+
+	// BARCODE COUNT(SERIAL)
+	TIniFile *Count_File = new TIniFile(COUNT_FILE);
+
+	int Count = Count_File->ReadInteger("BARCODE", Date, 0) + 1;
+	Count_File->WriteInteger("BARCODE", Date, Count);
+
+	AnsiString tex = IntToStr(Count);
+
+	Barcode_Data3.sprintf("T%s%s%s%07d", date, Barcode_Spec.Product_4M, Barcode_Spec.Lot, 10000 + Count); // Serial : 10000 + n
+
+	Barcode_Data = Barcode_Data + Barcode_Data1 + Barcode_Data2 + Barcode_Data3;
+
+
+	Zebra_Barcode_DataMatrix
+	(
+		Form1->ComPort1,
+		Barcode_Data,
+		50,
+		50,
+		4
+	);
+
+
+	Zebra_Execute(Form1->ComPort1);
+
+}

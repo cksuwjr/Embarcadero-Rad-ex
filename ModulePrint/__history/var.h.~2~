@@ -1,0 +1,19 @@
+#ifndef varh
+#define varh
+
+
+
+#define ONE	0
+#define SET	1
+
+enum
+{
+	STEP_INIT = 0,
+	STEP_PRINT_ONE,
+	STEP_PRINT_SET,
+	STEP_PRINT_SET_DELAY,
+	STEP_END
+};
+
+
+#endif
